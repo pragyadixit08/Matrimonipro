@@ -1,0 +1,198 @@
+{% load static %}
+<html>
+    <head>
+        <title>Gallery</title>
+         <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body {
+            background-color:#F2EEE8;
+            background-repeat: no-repeat;
+            background-size: auto;
+            color: #000;
+            height: auto;
+        }
+        .menuBar {
+            list-style: none;
+            position: fixed;
+            right: 1px;
+            background-color: #554B3F;
+            padding: 2px 0;
+            z-index: 1;
+            height: 45px;
+            width: 100%;
+        }
+        .menuBar li {
+            list-style: none;
+            float: right;
+            margin-top: 10px;
+        }
+        .menuBar a {
+            padding: 6px 15px;
+            color: #D3BFA8;
+            border: 1px solid #D3BFA8;
+            margin: 2px 10px;
+            text-decoration: none;
+            box-shadow: 2px 1px 10px #D3BFA8;
+            font-family: Calibri;
+        }
+        .menuBar a:hover {
+            background-color: #D3BFA8;
+            color: #000;
+            text-decoration: none;
+            box-shadow: 2px 1px 10px #000;
+            transition: 1.5s;
+            font-family: Calibri;
+        }
+        .comp {
+            position: fixed;
+            font-size: 30px;
+            margin-left: 30px;
+            background-color: #554B3F;
+            font-family: "Agency FB";
+            color: darkkhaki;
+            color: #F7F4F0;
+        }
+        .container {
+            position: relative;
+            top: 80px;
+        }
+        .title1 {
+            text-align: center;
+            font-size: 25px;
+            border: 1px solid #000;
+            color: #fff;
+            padding: 10px;
+            background-color: #2E404F;
+            opacity: 0.9;
+        }
+        .footer {
+            width: 99.9%;
+            text-align: center;
+            font-size: 15px;
+            position: absolute;
+            top: 1470px;
+            left: 1px;
+            padding: 8px;
+            border: 1px solid #D3BFA8;
+            color: #D3BFA8;
+            background-color: #554B3F;
+        }
+        .active1 {
+            background-color: #D16F00;
+            color: #000000;
+        }
+        li {
+            list-style: none;
+            display: inline;
+        }
+        .pic1 {
+            width: 1130px;
+            height: 500px;
+            margin-top: 20px;
+        }
+        .pic1:hover {
+            padding: 5px;
+            opacity: 0.8;
+            transition: 0.5s;
+            box-shadow: 2px 2px 10px black;
+        }
+        .pic2 {
+            width: 550px;
+            height: 400px;
+            margin-top: 20px;
+        }
+        .pic2:hover {
+            padding: 5px;
+            opacity: 0.8;
+            transition: 0.5s;
+            box-shadow: 2px 2px 10px black;
+        }
+        .pic3 {
+            width: 350px;
+            height: 350px;
+            margin-top: 20px;
+        }
+        .pic3:hover {
+            padding: 5px;
+            opacity: 0.8;
+            transition: 0.5s;
+            box-shadow: 2px 2px 10px black;
+        }
+        .logoutClass {
+            border: none;
+            text-decoration: underline;
+            padding: 0px;
+            margin-left: 30px;
+        }
+        .logoutClass a {
+            border: none;
+            text-decoration: underline;
+            box-shadow: none;
+            padding: 0px;
+        }
+        .logoutClass a:hover {
+            border: none;
+            text-decoration: underline;
+            box-shadow: none;
+            background-color:#554B3F;
+            color: #D3BFA8;
+            padding: 0px;
+        }
+    </style>
+<body>
+    <header>
+        <ul class="menuBar">
+            <div class="comp">Django Matrimony</div>
+            <li class="logoutClass"><a href="/logout/"> Logout </a> </li>
+            <li class="logoutClass"><a href="/user/"> Myprofile </a> </li>
+            <li><a href="/gallery/" class="active1"> Gallary </a></li>
+            <li><a href="/contact/"> Contact </a></li>
+            <li><a href="/service/"> Service </a></li>
+            <li><a href="/home/"> Home </a></li>
+        </ul>
+    </header>
+        <div class="container">
+            <div class="title1">Our clients</div>
+            <div class="row">
+                <div class="col-md-12">
+                    <img class="pic1" src="{% static 'images/p2.jpg' %}">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <img class="pic2" src="{% static 'images/p1.jpg' %}">
+                </div>
+                <div class="col-md-5">
+                    <img class="pic2" src="{% static 'images/p3.jpg' %}">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="pic3" src="{% static 'images/p4.jpg' %}">
+                </div>
+                <div class="col-md-4">
+                    <img class="pic3" src="{% static 'images/p5.jpg' %}">
+                </div>
+                <div class="col-md-4">
+                    <img class="pic3" src="{% static 'images/b1.JPG' %}">
+                </div>
+            </div>
+
+        </div>
+    <div class="row">
+        <div class="footer">copyrights &copy; 2018 | www.djangomatrimony.com</div>
+    </div>
+</body>
+</html>

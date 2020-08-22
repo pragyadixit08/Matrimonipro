@@ -1,0 +1,198 @@
+{% load static %}
+<html>
+    <head>
+        <title>Home</title>
+         <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body {
+            background-color:#F2EEE8;
+            background-repeat: no-repeat;
+            background-size: auto;
+            color: #fff;
+            height: auto;
+        }
+        .menuBar {
+            list-style: none;
+            position: fixed;
+            right: 1px;
+            background-color: #554B3F;
+            padding: 2px 0;
+            z-index: 1;
+            height: 45px;
+            width: 100%;
+        }
+        .menuBar li {
+            list-style: none;
+            float: right;
+            margin-top: 10px;
+        }
+        .menuBar a {
+            padding: 6px 15px;
+            color: #D3BFA8;
+            border: 1px solid #D3BFA8;
+            margin: 2px 10px;
+            text-decoration: none;
+            box-shadow: 2px 1px 10px #D3BFA8;
+            font-family: Calibri;
+        }
+        .menuBar a:hover {
+            background-color: #D3BFA8;
+            color: #000;
+            text-decoration: none;
+            box-shadow: 2px 1px 10px #000;
+            transition: 1.5s;
+            font-family: Calibri;
+        }
+        .comp {
+            position: fixed;
+            font-size: 30px;
+            margin-left: 30px;
+            background-color: #554B3F;
+            font-family: "Agency FB";
+            color: darkkhaki;
+            color: #F7F4F0;
+        }
+        .title1 {
+            text-align: center;
+            font-size: 30px;
+            position: relative;
+            top: 75px;
+            border: 1px solid #D3BFA8;
+            margin: 0 200px;
+            color: #D3BFA8;
+            padding: 10px;
+            background-color: darkslategrey;
+            box-shadow: 3px 3px 15px black;
+        }
+        .footer {
+            width: 99.9%;
+            text-align: center;
+            font-size: 15px;
+            position: absolute;
+            top: 700px;
+            left: 1px;
+            padding: 8px;
+            border: 1px solid #D3BFA8;
+            color: #D3BFA8;
+            background-color: #554B3F;
+        }
+        .active1 {
+            background-color: #D16F00;
+            color: #000000;
+        }
+        .boys a {
+            background-color: #D3BFA8;
+            border: 1px solid #D16F00;
+            padding: 10px 100px 10px 100px;
+            font-size: 20px;
+            text-align: center;
+            position: relative;
+            top: 150px;
+            left: 200px;
+            color: #000;
+            text-decoration: none;
+            box-shadow: 3px 3px 15px black;
+        }
+        .girls a {
+            background-color: #D3BFA8;
+            border: 1px solid #D16F00;
+            padding: 10px 100px 10px 100px;
+            font-size: 20px;
+            text-align: center;
+            position: relative;
+            top: 150px;
+            left: 350px;
+            color: #000;
+            text-decoration: none;
+            box-shadow: 3px 3px 15px black;
+        }
+        .girls a:hover {
+            opacity: 0.6;
+            font-weight: bold;
+            padding: 12px 100px 12px 100px;
+            border-radius: 5px;
+        }
+        .boys a:hover {
+            opacity: 0.6;
+            font-weight: bold;
+            padding: 12px 100px 12px 100px;
+            border-radius: 5px;
+        }
+        .cphotos{
+            position: relative;
+            top: 220px;
+            {#left: 0px;#}
+            {#margin: 10px;#}
+        }
+        img {
+            width: 425px;
+            height: 330px;
+        }
+        img:hover {
+            padding: 5px;
+        }
+        .logoutClass {
+            border: none;
+            text-decoration: underline;
+            padding: 0px;
+            margin-left: 30px;
+        }
+        .logoutClass a {
+            border: none;
+            text-decoration: underline;
+            box-shadow: none;
+            padding: 0px;
+        }
+        .logoutClass a:hover {
+            border: none;
+            text-decoration: underline;
+            box-shadow: none;
+            background-color:#554B3F;
+            color: #D3BFA8;
+            padding: 0px;
+        }
+    </style>
+<body>
+    <header>
+        <ul class="menuBar">
+            <li class="logoutClass"><a href="/logout/"> Logout </a> </li>
+            <li class="logoutClass"><a href="/user/"> Myprofile </a> </li>
+            <div class="comp">Django Matrimony</div>
+            <li><a href="/gallery/"> Gallary </a></li>
+            <li><a href="/contact/"> Contact </a></li>
+            <li><a href="/service/"> Service </a></li>
+            <li><a href="/home/" class="active1"> Home</a></li>
+        </ul>
+    </header>
+        <div class="title1"> Are you looking...? </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 boys">
+                    <div> <a href="/boys/">Looking Boy </a> </div>
+                </div>
+                 <div class="col-md-3 girls">
+                    <div> <a href="/girls/"> Looking Girl </a> </div>
+                </div>
+            </div>
+        </div>
+    <div class="row cphotos">
+        <div class="col-md-4"><img src="{% static 'images/p1.jpg' %}"></div>
+        <div class="col-md-4"><img src="{% static 'images/p5.jpg' %}"></div>
+        <div class="col-md-4"><img src="{% static 'images/p3.jpg' %}"></div>
+    </div>
+    <div class="row">
+        <div class="footer">copyrights &copy; 2018 | www.djangomatrimony.com</div>
+    </div>
+
+</body>
+</html>

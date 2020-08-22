@@ -1,0 +1,208 @@
+{% load static %}
+<html>
+    <head>
+        <title>Contact us</title>
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body {
+            background-color:#F2EEE8;
+            background-repeat: no-repeat;
+            background-size: auto;
+            color: #000;
+            height: auto;
+        }
+        .menuBar {
+            list-style: none;
+            position: fixed;
+            right: 1px;
+            background-color: #554B3F;
+            padding: 2px 0;
+            z-index: 1;
+            height: 45px;
+            width: 100%;
+        }
+        .menuBar li {
+            list-style: none;
+            float: right;
+            margin-top: 10px;
+        }
+        .menuBar a {
+            padding: 6px 15px;
+            color: #D3BFA8;
+            border: 1px solid #D3BFA8;
+            margin: 2px 10px;
+            text-decoration: none;
+            box-shadow: 2px 1px 10px #D3BFA8;
+            font-family: Calibri;
+        }
+        .menuBar a:hover {
+            background-color: #D3BFA8;
+            color: #000;
+            text-decoration: none;
+            box-shadow: 2px 1px 10px #000;
+            transition: 1.5s;
+            font-family: Calibri;
+        }
+        .comp {
+            position: fixed;
+            font-size: 30px;
+            margin-left: 30px;
+            background-color: #554B3F;
+            font-family: "Agency FB";
+            color: darkkhaki;
+            color: #F7F4F0;
+        }
+        .container {
+            position: relative;
+            top: 80px;
+        }
+        .title1 {
+            text-align: center;
+            font-size: 25px;
+            border: 1px solid #000;
+            color: #fff;
+            padding: 10px;
+            background-color: #2E404F;
+            box-shadow: 2px 2px 10px black;
+        }
+        .footer {
+            width: 99.9%;
+            text-align: center;
+            font-size: 15px;
+            position: absolute;
+            top: 1000px;
+            left: 1px;
+            padding: 8px;
+            border: 1px solid #D3BFA8;
+            color: #D3BFA8;
+            background-color: #554B3F;
+        }
+        .active1 {
+            background-color: #D16F00;
+            color: #000000;
+        }
+        li {
+            list-style: none;
+            display: inline;
+        }
+        form {
+            background-color: #867B6D;
+            padding: 20px;
+            box-shadow: 2px 2px 10px black;
+        }
+        .mainCont {
+            border: 1px solid black;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 20px;
+            background-color: #867B6D;
+            color: #F7F4F0;
+            box-shadow: 2px 2px 10px black;
+        }
+        .subCont {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            font-size: 17px;
+            margin-top:15px ;
+            background-color: #867B6D;
+            color: #F7F4F0;
+            box-shadow: 2px 2px 10px black;
+        }
+        .btn {
+           position: relative;
+            left: 200px;
+            padding: 3px 20px 3px 20px;
+        }
+        .logoutClass {
+            border: none;
+            text-decoration: underline;
+            padding: 0px;
+            margin-left: 30px;
+        }
+        .logoutClass a {
+            border: none;
+            text-decoration: underline;
+            box-shadow: none;
+            padding: 0px;
+        }
+        .logoutClass a:hover {
+            border: none;
+            text-decoration: underline;
+            box-shadow: none;
+            background-color:#554B3F;
+            color: #D3BFA8;
+            padding: 0px;
+        }
+    </style>
+<body>
+    <header>
+        <ul class="menuBar">
+            <div class="comp">Django Matrimony</div>
+            <li class="logoutClass"><a href="/logout/"> Logout </a> </li>
+            <li class="logoutClass"><a href="/user/"> Myprofile </a> </li>
+            <li><a href="/gallery/"> Gallary </a></li>
+            <li><a href="/contact/" class="active1"> Contact </a></li>
+            <li><a href="/service/"> Service </a></li>
+            <li><a href="/home/"> Home </a></li>
+        </ul>
+    </header>
+        <div class="container">
+            <div class="row">
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="title1"> Yours Details </div>
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ cform }}<br>
+                        <input type="submit" value="Submit" class="btn btn-primary">
+                    </form>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="title1"> Contact Us </div>
+                    <h3> <u> <i>Main branch in USA </i></u></h3>
+                    <div class="mainCont">
+                        No: 501, 6th Floar <br>5Star Techpark, Sonata street<br>
+                        23rd cross, 9th Main Road<br>
+                        New Jursey, USA- 202003,
+                        Ph : 303004
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3> <u> <i>Hyderabad office </i></u></h3>
+                            <div class="subCont">
+                                No: 610, 6th Floar, Sathyam Main Road<br>
+                                Ameerpet, Hyderabad, Telangana - 404004
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3><u> <i> Bangalore office</i></u></h3>
+                            <div class="subCont">
+                                No: 80, 8th Floar, 5th cross, <br>1st Main Road Kormangala<br>
+                                Bangalore, Karnataka - 585101<br>
+                                Ph: 080-236606
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="row">
+        <div class="footer">copyrights &copy; 2018 | www.djangomatrimony.com</div>
+
+    </div>
+
+</body>
+</html>

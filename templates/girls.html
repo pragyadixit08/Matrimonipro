@@ -1,0 +1,164 @@
+{% load static %}
+<html>
+<head>
+    <title>Girls details</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        body {
+            background-color:#F2EEE8;
+            background-repeat: no-repeat;
+            background-size: auto;
+            color: #fff;
+            height: auto;
+        }
+        .menuBar {
+            list-style: none;
+            position: fixed;
+            right: 1px;
+            background-color: #554B3F;
+            padding: 2px 0;
+            z-index: 1;
+            height: 45px;
+            width: 100%;
+        }
+        .menuBar li {
+            list-style: none;
+            float: right;
+            margin-top: 12px;
+        }
+        .menuBar a {
+            padding: 5px 12px;
+            color: #D3BFA8;
+            border: 1px solid #D3BFA8;
+            margin: 2px 10px;
+            text-decoration: none;
+            box-shadow: 2px 1px 10px #D3BFA8;
+            font-family: Calibri;
+        }
+        .menuBar a:hover {
+            background-color: #D3BFA8;
+            color: #000;
+            text-decoration: none;
+            box-shadow: 2px 1px 10px #000;
+            transition: 1.5s;
+            font-family: Calibri;
+        }
+        .comp {
+            position: fixed;
+            font-size: 30px;
+            margin-left: 30px;
+            margin-top: 5px;
+            background-color: #554B3F;
+            font-family: "Agency FB";
+            color: darkkhaki;
+            color: #F7F4F0;
+        }
+        .title1 {
+            text-align: center;
+            font-size: 30px;
+            position: relative;
+            top: 75px;
+            border: 1px solid #D3BFA8;
+            margin: 0 200px;
+            color: #D3BFA8;
+            padding: 10px;
+            background-color: darkslategrey;
+            box-shadow: 3px 3px 15px black;
+        }
+        .active1 {
+            background-color: #D16F00;
+            color: #000000;
+        }
+        .gClass {
+            width: 40%;
+            height: 30%;
+            border: 2px solid black;
+            background-color: #867B6D;
+            list-style: none;
+            float: left;
+            font-family: Calibri;
+            padding: 10px;
+            position: relative;
+            top: 100px;
+            margin: 10px 20px 20px 70px;
+            font-size: 20px;
+            color: #F1F0EF;
+        }
+        .gClass li {
+            margin: 5px;
+        }
+        .pic1 {
+            width: 180px;
+            height: 180px;
+            float: left;
+            background: #BABDA2;
+            margin:10px 40px 10px 10px;
+            color: #fff;
+            font-size: 15px;
+            border-radius: 5px;
+        }
+        img {
+            width: 180px;
+            height: 180px;
+        }
+        .logoutClass {
+            border: none;
+            text-decoration: underline;
+            padding: 0px;
+            margin-left: 30px;
+        }
+        .logoutClass a {
+            border: none;
+            text-decoration: underline;
+            box-shadow: none;
+            padding: 0px;
+        }
+        .logoutClass a:hover {
+            border: none;
+            text-decoration: underline;
+            box-shadow: none;
+            background-color:#554B3F;
+            color: #D3BFA8;
+            padding: 0px;
+        }
+    </style>
+</head>
+    <body>
+    <header>
+        <ul class="menuBar">
+            <div class="comp">Django Matrimony</div>
+            <li class="logoutClass"><a href="/logout/"> Logout </a> </li>
+            <li class="logoutClass"><a href="/user/"> Myprofile </a> </li>
+            <li><a href="/gallery/"> Gallary </a></li>
+            <li><a href="/contact/"> Contact </a></li>
+            <li><a href="/service/"> Service </a></li>
+            <li><a href="/home/" class="active1"> Home</a></li>
+        </ul>
+    </header>
+        <div class="container">
+            <div class="row">
+            <div class="title1"> Girls profiles </div>
+                <div class="col-md-6">
+                    {% if gData %}
+                        {% for gd in gData %}
+                            <ul class="gClass">
+                                <div class="pic1"><img src="{% static 'images/gp1.png' %}"></div>
+                                <li> First name : {{ gd.first_name }}</li>
+                                <li> Last name : {{ gd.last_name }}</li>
+                                <li> Gender : {{ gd.gender }}</li>
+                                <li> Email : {{ gd.email }}</li>
+                                <li> Mobile : {{ gd.mobile }}</li>
+                                <li> DOB : {{ gd.dob }}</li>
+                            </ul>
+                        {% endfor %}
+                        {% else %}
+                            <h3> No data.....</h3>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

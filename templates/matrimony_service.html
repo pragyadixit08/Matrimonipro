@@ -1,0 +1,208 @@
+{% load static %}
+<html>
+    <head>
+        <title>Services</title>
+         <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body {
+            background-color:#F2EEE8;
+            background-repeat: no-repeat;
+            background-size: auto;
+            color: #fff;
+            height: auto;
+        }
+        .menuBar {
+            list-style: none;
+            position: fixed;
+            right: 1px;
+            background-color: #554B3F;
+            padding: 2px 0;
+            z-index: 1;
+            height: 45px;
+            width: 100%;
+        }
+        .menuBar li {
+            list-style: none;
+            float: right;
+            margin-top: 10px;
+        }
+        .menuBar a {
+            padding: 6px 15px;
+            color: #D3BFA8;
+            border: 1px solid #D3BFA8;
+            margin: 2px 10px;
+            text-decoration: none;
+            box-shadow: 2px 1px 10px #D3BFA8;
+            font-family: Calibri;
+        }
+        .menuBar a:hover {
+            background-color: #D3BFA8;
+            color: #000;
+            text-decoration: none;
+            box-shadow: 2px 1px 10px #000;
+            transition: 1.5s;
+            font-family: Calibri;
+        }
+        .comp {
+            position: fixed;
+            font-size: 30px;
+            margin-left: 30px;
+            background-color: #554B3F;
+            font-family: "Agency FB";
+            color: darkkhaki;
+            color: #F7F4F0;
+        }
+        .container {
+            position: relative;
+            top: 80px;
+        }
+        .title1 {
+            text-align: center;
+            font-size: 25px;
+            border: 1px solid #000;
+            margin: 0 200px;
+            color: #fff;
+            padding: 10px;
+            background-color: darkslategrey;
+            box-shadow: 3px 3px 15px black;
+        }
+        .footer {
+            width: 99.9%;
+            text-align: center;
+            font-size: 15px;
+            position: absolute;
+            top: 700px;
+            left: 1px;
+            padding: 8px;
+            border: 1px solid #D3BFA8;
+            color: #D3BFA8;
+            background-color: #554B3F;
+        }
+        .active1 {
+            background-color: #D16F00;
+            color: #000000;
+        }
+        .boxs {
+            margin: 30px 5px 20px 50px;
+            padding: 10px;
+            text-align: center;
+            background-color: #867B6D;
+            color: #000;
+            font-size: 18px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px black;
+        }
+        .hd1 {
+            font-weight: bold;
+            text-decoration: underline;
+            margin-bottom: 10px;
+            color: #F7F4F0;
+        }
+        .logoutClass {
+            border: none;
+            text-decoration: underline;
+            padding: 0px;
+            margin-left: 30px;
+        }
+        .logoutClass a {
+            border: none;
+            text-decoration: underline;
+            box-shadow: none;
+            padding: 0px;
+        }
+        .logoutClass a:hover {
+            border: none;
+            text-decoration: underline;
+            box-shadow: none;
+            background-color:#554B3F;
+            color: #D3BFA8;
+            padding: 0px;
+        }
+    </style>
+<body>
+    <header>
+        <ul class="menuBar">
+            <div class="comp">Django Matrimony</div>
+            <li class="logoutClass"><a href="/logout/"> Logout </a> </li>
+            <li class="logoutClass"><a href="/user/"> Myprofile </a> </li>
+            <li><a href="/gallery/"> Gallary </a></li>
+            <li><a href="/contact/"> Contact </a></li>
+            <li><a href="/service/" class="active1"> Service </a></li>
+            <li><a href="/home/"> Home </a></li>
+        </ul>
+    </header>
+        <div class="container">
+            <div class="row">
+                <div class="title1"> Our services </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 boxs">
+                    <div class="hd1"> Wedding Venues </div>
+                    <div>Register now and get 10% discount, offer ends on 30th of this month.
+                    Hurry up... </div>
+                </div>
+                 <div class="col-md-4 boxs">
+                     <div class="hd1"> Wedding Planners & Contractors </div>
+                    <div>Renew your account offer, offer ends on 30th of this month.
+                    Hurry up...Renew your account offer.</div>
+                </div>
+                <div class="col-md-3 boxs">
+                    <div class="hd1"> Beauty & Grooming </div>
+                    <div>Register now and get 15% discount, offer ends on 30th of this month.
+                    Hurry up...</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3 boxs">
+                    <div class="hd1"> Wedding Photographers </div>
+                    <div>Register now and get 10% discount, offer ends on 30th of this month.
+                    Hurry up... </div>
+                </div>
+                 <div class="col-md-4 boxs">
+                     <div class="hd1"> Decorators </div>
+                    <div>Renew your account offer, offer ends on 30th of this month.
+                    Hurry up...Renew your account offer....</div>
+                </div>
+                <div class="col-md-3 boxs">
+                    <div class="hd1"> Music & Entertainment </div>
+                    <div>Register now and get 15% discount, offer ends on 30th of this month.
+                    Hurry up...</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3 boxs">
+                    <div class="hd1"> Honeymoon Packages </div>
+                    <div>Register now and get 10% discount, offer ends on 30th of this month.
+                    Hurry up... </div>
+                </div>
+                 <div class="col-md-4 boxs">
+                     <div class="hd1"> Hotels & Accommodation </div>
+                    <div>Renew your account offer, offer ends on 30th of this month.
+                    Hurry up...Renew your account offer..</div>
+                </div>
+                <div class="col-md-3 boxs">
+                    <div class="hd1"> Background Verification & Detective Services </div>
+                    <div>Register now and get 15% discount, offer ends on 30th.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="row">
+        <div class="footer">copyrights &copy; 2018 | www.djangomatrimony.com</div>
+    </div>
+
+</body>
+</html>
